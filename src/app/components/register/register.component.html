@@ -1,0 +1,17 @@
+<br><br><br><br><br><app-welcome></app-welcome>
+<h1>reactive driven register</h1>
+<form [formGroup]="user" (ngSubmit)="register()">
+    userName: <input type="text" name="username" formControlName="username">
+    <span *ngIf="user.get('username')?.touched&& user.get('username')?.invalid">invlaid username</span><br>
+
+    passWord: <input type="text" name="password" formControlName="password">
+    <span *ngIf="user.get('password')?.touched&& user.get('password')?.invalid">invalid password</span><br>
+    
+    email: <input type="email" name="email" formControlName="email">
+    <span *ngIf="user.get('email')?.touched&& user.get('email')?.invalid">invalid email</span><br>
+
+    age: <input type="number" name="age" formControlName="age">
+    <span *ngIf="user.get('age')?.touched&& user.get('age')?.invalid">invalid age</span><br>
+    <button type="submit">Register</button>
+</form>
+<app-footer></app-footer>

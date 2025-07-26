@@ -1,0 +1,73 @@
+/* Reset default margin */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Sections inside navbar */
+.logo,
+.nav-buttons,
+.spacer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo on the left */
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Center nav buttons */
+.nav-buttons {
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Optional right section (empty for now) */
+.spacer {
+    justify-content: flex-end;
+}
+
+/* Button styles */
+.nav-button {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Register button style */
+.register {
+    background-color: white;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.register:hover {
+    background-color: #e0e0e0;
+}

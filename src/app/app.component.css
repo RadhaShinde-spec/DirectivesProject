@@ -1,0 +1,18 @@
+h1{
+    color: red;
+}
+p{
+    color:blue;
+}
+#p{
+    color: rgb(72, 128, 87);
+}
+
+.primary{
+    color: aqua;
+    font-size: 30px;
+}
+.secondary{
+    color: blueviolet;
+    font-size: 20px;
+}

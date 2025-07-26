@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-import { LoginserviceService } from './services/loginservice.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-mywork',
+  templateUrl: './mywork.component.html',
+  styleUrls: ['./mywork.component.css']
 })
-export class AppComponent {
+export class MyworkComponent {
   title = 'DirectivesProject';
   isVisible = true;
   buttonName = 'Hide';
 
-  constructor(private service: LoginserviceService) {
-
-  }
   changeDisplay() {
     // negation it will make isVisible from false to true and true to fals based on button clikc
     this.isVisible = !this.isVisible;
@@ -75,21 +71,15 @@ export class AppComponent {
 
   isPrimary = true;
 
-  getClass() {
-    if (this.isPrimary) {
+  getClass(){
+    if(this.isPrimary){
       return 'secondary';
     }
-    else {
+    else{
       return 'primary';
     }
   }
-  data: any;
-  getData() {
-    this.service.getData().subscribe(res => {
-      this.data = res;
-      console.log(res);
-      
-    })
-  }
+
 
 }
+
